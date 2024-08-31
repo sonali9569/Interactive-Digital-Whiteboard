@@ -1,0 +1,32 @@
+.container {
+    @apply absolute left-1/2 top-5 px-1.5 py-1.5 flex rounded-lg border border-gray-300;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: auto;
+    max-width: 90%;
+    /* Constrain the width to 90% of the viewport width */
+}
+
+.container:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: translateX(-50%) translateY(-2px);
+}
+
+.toolItem {
+    @apply flex justify-center items-center text-lg p-2 text-black mr-3 last:mr-0 cursor-pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border-radius: 0.375rem;
+    /* Slight rounding for a cleaner look */
+}
+
+.toolItem:hover {
+    @apply bg-blue-100 text-gray-800;
+    transform: scale(1.05);
+}
+
+.toolItem.active {
+    @apply bg-blue-300 text-gray-800;
+    transform: scale(1.1);
+}
